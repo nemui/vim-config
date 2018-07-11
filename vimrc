@@ -15,3 +15,4 @@ set autoindent
 autocmd BufWritePre * :%s/\s\+$//e
 set hlsearch
 set showmatch
+:nmap <C-N><C-N> :set invnumber<CR>

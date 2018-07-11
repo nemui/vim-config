@@ -16,3 +16,10 @@ autocmd BufWritePre * :%s/\s\+$//e
 set hlsearch
 set showmatch
 :nmap <C-N><C-N> :set invnumber<CR>
+
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+
+autocmd bufwritepost *.js silent !standard --fix %
+set autoread
